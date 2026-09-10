@@ -10,7 +10,7 @@ command = "node scripts/gen-version.js"
 # 只限制客户端 -n/--network-code，不限制客户端密码。
 # 每个网络首次创建时确定网段：客户端指定 --ip 时按该 IP 所在 /24 推导；
 # 未指定 --ip 时使用默认 10.46.0.0/24，网关 10.46.0.1。
-NETWORKS = "10.46.0.0/24"
+NETWORKS = "L8Icw575K7jSIGY0,pgIsdW76kWqWpdJx,pgIsdW76kWqWpdJx"
 
 # 离线设备从内存/存储中移除前保留的秒数，过期后将删除整个组网网络编号，默认86400秒 = 24小时。
 LEASE_DURATION = "86400"
