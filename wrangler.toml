@@ -10,7 +10,7 @@ command = "node scripts/gen-version.js"
 # 只限制客户端 -n/--network-code，不限制客户端密码。
 # 每个网络首次创建时确定网段：客户端指定 --ip 时按该 IP 所在 /24 推导；
 # 未指定 --ip 时使用默认 10.46.0.0/24，网关 10.46.0.1。
-NETWORKS = ""
+NETWORKS = "10.46.0.0/24"
 
 # 离线设备从内存/存储中移除前保留的秒数，过期后将删除整个组网网络编号，默认86400秒 = 24小时。
 LEASE_DURATION = "86400"
@@ -19,7 +19,7 @@ LEASE_DURATION = "86400"
 # GATEWAY = "10.46.0.1"
 
 # 页面中服务端节点的名称，留空显示"服务器"。
-# GATEWAY_NAME = "服务器"
+# GATEWAY_NAME = "server"
 
 # Durable Object 位置提示。让 DO 实例尽量在指定区域创建，降低客户端连接延迟。
 # 可选值：
@@ -35,8 +35,8 @@ LOCATION_HINT = "apac"
 # SERVER_TOKEN 是服务端互联接口的共享认证密钥；参与互联的所有服务端必须配置相同的非空值。
 # SERVER_TOKEN 留空会禁用 /peer/* 服务端互联接口，并停止客户端信息同步和跨服务端数据转发。
 # 示例：PEER_SERVERS = "https://vnts2-a.example.workers.dev,https://vnts2-b.example.workers.dev"
-PEER_SERVERS = ""
-SERVER_TOKEN = ""
+PEER_SERVERS = "https://etwss.azimiao.top"
+SERVER_TOKEN = "KdgOR0yqOs4aEZGfX4ts"
 
 # 维护周期，单位秒：清理租约、刷新互联客户端列表、向本地客户端发送网关 Ping。
 MAINTENANCE_INTERVAL = "15"
@@ -44,7 +44,7 @@ MAINTENANCE_INTERVAL = "15"
 # 禁止服务端中转客户端数据。启用后仍允许注册、客户端列表、Ping/Pong、打洞握手；
 # TURN/QUIC/广播类服务端中转会被丢弃，客户端只能依赖 P2P，P2P 不通则业务流量不通。
 # 只有 true/1/yes/on 会禁止中转；其他值或留空默认启用中转。
-DISABLE_RELAY = "0"
+DISABLE_RELAY = "1"
 
 # 日志级别：info/debug/off。
 LOG_LEVEL = "off"
